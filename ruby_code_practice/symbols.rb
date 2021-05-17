@@ -1,13 +1,42 @@
 
 def pig_it(text)
-  newT = text.chars
-  
-  puts newT.map.include?(" ") ? newT.select : newT[4]
- end
+  #newT = text.chars
+  r = text.chars.map {|i| i == " " ? "yes" : "no"}
+   r.map {|i| i
+    if i== "yes"
+      puts "AGAIN"
+    elsif i == "no"
+      puts "NOPE"
+    else 
+      puts "huh?"
+    end
+  }
+
+end
 
 nine = 'Pig latin is cool'
 
 pig_it(nine)
+
+#WORKS:
+# def pig_it(text)
+#   #newT = text.chars
+#   r = text.chars.map {|i| i == " " ? "yes" : "no"}
+#    r.map {|i| i
+#     if i== "yes"
+#       puts "AGAIN"
+#     elsif i == "no"
+#       puts "NOPE"
+#     else 
+#       puts "huh?"
+#     end
+#   }
+
+# end
+
+# nine = 'Pig latin is cool'
+
+# pig_it(nine)
 
 
 # def sum_two_smallest_numbers(numbers)
@@ -20,6 +49,7 @@ pig_it(nine)
         
 #       puts total
 # end
+  # puts newT.map.include?(" ") ? newT.collect{|i| i + "p"}: newT[4]
 
 
 # doit = [4, 2, 1, 5, 9]
